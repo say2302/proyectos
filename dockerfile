@@ -1,9 +1,7 @@
 FROM debian:bullseye
-# Probar conectividad a Internet
-RUN ping -c 4 google.com || echo "No hay conexión a Internet"
 
 # Instalar Mosquitto manualmente
-RUN apt-get update && apt-get install -y mosquitto mosquitto-clients
+RUN apt-get install -y mosquitto mosquitto-clients
 
 
 
