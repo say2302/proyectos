@@ -1,12 +1,9 @@
-FROM debian:bullseye
-
-# Instalar Mosquitto manualmente
-RUN apt-get install -y mosquitto mosquitto-clients
-
+# Usar la imagen oficial de Mosquitto
+FROM eclipse-mosquitto:latest
 
 
 # Exponer puertos
 EXPOSE 1883 8883
 
 # Iniciar Mosquitto
-CMD ["/usr/sbin/mosquitto", "-c", "/etc/mosquitto/mosquitto.conf"]
+CMD ["/usr/sbin/mosquitto", "-c", "/mosquitto/config/mosquitto.conf"]
