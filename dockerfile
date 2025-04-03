@@ -5,7 +5,7 @@ FROM eclipse-mosquitto:latest
 COPY mosquitto.conf /mosquitto/config/mosquitto.conf
 
 # Exponer los puertos necesarios
-EXPOSE 1883 8883
+EXPOSE 1883 
 
 # Iniciar Mosquitto
 CMD ["/usr/sbin/mosquitto", "-c", "/mosquitto/config/mosquitto.conf"]
