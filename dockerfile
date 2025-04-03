@@ -11,3 +11,6 @@ EXPOSE 1883
 # Inspeccionar puertos en uso
 RUN apt-get update && apt-get install -y net-tools
 CMD ["sh", "-c", "netstat -tuln && /usr/sbin/mosquitto -c /mosquitto/config/mosquitto.conf"]
+
+# Iniciar Mosquitto
+CMD ["/usr/sbin/mosquitto", "-c", "/mosquitto/config/mosquitto.conf"]
