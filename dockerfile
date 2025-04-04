@@ -2,7 +2,7 @@
 FROM eclipse-mosquitto:latest
 
 # Copiar el archivo de configuración personalizado (opcional)
-COPY mosquitto.conf /proyectos
+COPY mosquitto.conf /proyectos in main
 
 # Exponer los puertos necesarios
 EXPOSE 1883 8883
