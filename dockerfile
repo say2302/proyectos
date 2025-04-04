@@ -1,7 +1,6 @@
 # Usar la imagen oficial de Mosquitto
 FROM eclipse-mosquitto:latest
-# Instalar iptables
-RUN apt-get install -y iptables
+
 
 # Bloquear conexiones locales al puerto 1883
 RUN iptables -A INPUT -p tcp --dport 1883 -s 127.0.0.1 -j DROP
